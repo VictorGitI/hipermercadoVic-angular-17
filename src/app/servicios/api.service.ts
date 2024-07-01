@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable, inject } from '@angular/core';
 import { Observable } from 'rxjs';
+import { environment } from '../../environments/environment.development';
 
 @Injectable({
   providedIn: 'root'
@@ -8,7 +9,7 @@ import { Observable } from 'rxjs';
 export class ApiService {
 
   private _http = inject(HttpClient);
-  private _urlBase: string = 'https://victorpython28.pythonanywhere.com/productos';
+  private _urlBase: string = environment.apiUrl;
 
 
   getProductos():Observable<any>{
