@@ -1,0 +1,18 @@
+<div class="container">
+    @if(cargando){
+    <h5>cargando...</h5>
+    }
+    @if(!cargando){
+    <div class="card" style="width: 18rem;">
+        <img src="{{producto?.imagen}}" class="card-img-top" alt="...">
+        <div class="card-body">
+            <h5 class="card-title">{{producto?.nombre}}</h5>
+            <h5 class="card-title">{{producto?.marca}}</h5>
+            <h4 class="card-title">{{producto?.precio | currency}}</h4>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+                content.</p>
+
+        </div>
+    </div>
+    }
+</div>
